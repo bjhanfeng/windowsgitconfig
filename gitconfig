@@ -1,0 +1,37 @@
+[core]
+	autocrlf = false
+	excludesfile=~/.gitignore
+[user]
+	name = "han feng"
+	email = hfwork@gmail.com
+[merge]
+	summary = true
+	tool = vimdiff
+[diff]
+	renames = copy
+	wordregex = "[[:alnum:]_]+|[^[:space:]]"
+[i18n]
+	logoutputencoding = GBK
+	commitEncoding = GBK
+[color]
+	diff = auto
+	status = true
+	branch = auto
+	interactive = auto;
+	ui = auto;
+[showbranch]
+    default = --topo-order
+    default = heads/*
+[status]
+	submodulesummary = -1
+[format]
+	numbered = auto
+[push]
+	default = tracking
+[mailmap]
+	file = ~/.mailmap
+
+[alias]
+	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs -t sed
+	slg = shortlog --pretty='format:%h %s'
+	locate = !sh -c 'git ls-files | grep --color=auto "$1"' -
